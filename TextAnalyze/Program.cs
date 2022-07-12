@@ -17,7 +17,7 @@ namespace Program
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             //read text from txt
-            string TextTest = File.ReadAllText("book.txt").ToLower();
+            string TextTest = File.ReadAllText("text.txt").ToLower();
 
             //replace all non-word chars to space
             TextTest = Regex.Replace(TextTest, "\\W{1,}", " ");
@@ -80,7 +80,7 @@ namespace Program
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                 ts.Hours, ts.Minutes, ts.Seconds,
                 ts.Milliseconds / 10);
-            Console.WriteLine("\nRunTime " + elapsedTime);
+            Console.WriteLine("\nRunTime " + elapsedTime + " ms");
         }
 
         static void FindTriplets(int begining, int end, string Text)
