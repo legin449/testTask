@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oleg\\source\\repos\\TextAnalyze\\TextAnalyze\\TextAnalyze.csproj": {}
+    "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oleg\\source\\repos\\TextAnalyze\\TextAnalyze\\TextAnalyze.csproj": {
+    "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oleg\\source\\repos\\TextAnalyze\\TextAnalyze\\TextAnalyze.csproj",
+        "projectUniqueName": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj",
         "projectName": "TextAnalyze",
-        "projectPath": "C:\\Users\\Oleg\\source\\repos\\TextAnalyze\\TextAnalyze\\TextAnalyze.csproj",
+        "projectPath": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj",
         "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oleg\\source\\repos\\TextAnalyze\\TextAnalyze\\obj\\",
+        "outputPath": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",

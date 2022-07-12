@@ -13,11 +13,17 @@ namespace Program
 
         static void Main()
         {
+            Console.WriteLine("Введите путь до txt файла");
+            string pathText = Console.ReadLine();
+            if (!File.Exists(pathText))
+            {
+                throw (new Exception("Проверьте правильно ли указан путь до файла"));
+            }
             //Init timer
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             //read text from txt
-            string TextTest = File.ReadAllText("text.txt").ToLower();
+            string TextTest = File.ReadAllText(pathText).ToLower();
 
             //replace all non-word chars to space
             TextTest = Regex.Replace(TextTest, "\\W{1,}", " ");
