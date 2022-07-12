@@ -33,7 +33,7 @@ namespace Program
             int spacesCount = spaces.Count();
 
             //spiltBy could be changed for performance
-            int splitBy = 10;
+            int splitBy = 1;
 
             //getting number of splits
             int numOfProcesses = (spacesCount+splitBy) / splitBy;
@@ -58,7 +58,14 @@ namespace Program
                 }
                 else
                 {
-                    begin = spaces[i].Index;
+                    if(i==0)
+                    {
+                        begin = 0;
+                    }
+                    else
+                    {
+                        begin = spaces[i].Index;
+                    }
                     end = spaces[spacesCount - 1].Index;
                 }
                 if (!(begin == end))

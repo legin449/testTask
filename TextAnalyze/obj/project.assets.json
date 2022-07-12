@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Oleg\\.nuget\\packages\\": {}
+    "C:\\Users\\oleg_\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj",
+      "projectUniqueName": "G:\\testTask-main\\TextAnalyze\\TextAnalyze.csproj",
       "projectName": "TextAnalyze",
-      "projectPath": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\TextAnalyze.csproj",
-      "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oleg\\source\\repos\\testTask\\TextAnalyze\\obj\\",
+      "projectPath": "G:\\testTask-main\\TextAnalyze\\TextAnalyze.csproj",
+      "packagesPath": "C:\\Users\\oleg_\\.nuget\\packages\\",
+      "outputPath": "G:\\testTask-main\\TextAnalyze\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\oleg_\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
