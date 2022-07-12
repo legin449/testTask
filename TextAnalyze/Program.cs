@@ -68,17 +68,11 @@ namespace Program
             while (threads.Count(x => x.IsAlive) > 0)
                 Thread.Sleep(5);
             //sorting dictionary
-            var triplesSorted = triples.OrderByDescending(key => key.Value);
-            int index = 0;
+            var triplesSorted = triples.OrderByDescending(key => key.Value).Take(10);
             //displaying first 10 triples
             foreach (var triple in triplesSorted)
             {
-                Console.WriteLine($"{triple}");
-                index++;
-                if (index == 10)
-                {
-                    break;
-                }
+                Console.WriteLine($"{triple.Key} - found {triple.Value} times,");
             }
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
@@ -86,7 +80,7 @@ namespace Program
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
                 ts.Hours, ts.Minutes, ts.Seconds,
                 ts.Milliseconds / 10);
-            Console.WriteLine("RunTime " + elapsedTime);
+            Console.WriteLine("\nRunTime " + elapsedTime);
         }
 
         static void FindTriplets(int begining, int end, string Text)
