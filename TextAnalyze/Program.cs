@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 using System.Collections.Concurrent;
+using System.Linq;
 
 namespace Program
 {
@@ -31,42 +32,49 @@ namespace Program
             //splitting text for multithreading
             var spaces = Regex.Matches(TextTest, " ");
             int spacesCount = spaces.Count();
+            //if no spaces in Text
+            if (spacesCount == 0)
+            {
+                spaces = Regex.Matches(TextTest, "\\w");
+                spacesCount = TextTest.Length;
+            }
 
             //spiltBy could be changed for performance
-            int splitBy = 1;
-
+            int splitBy = 10;
+            //if too many threads
+            if (TextTest.Length/2 < splitBy)
+            {
+                splitBy = TextTest.Length/2;
+                Console.WriteLine($"Текст слишком маленький для такого количества потоков, будет использовано: {splitBy} потоков") ;
+            }
             //getting number of splits
             int numOfProcesses = (spacesCount+splitBy) / splitBy;
-            int begin;
-            int end;
+
+            int begin = 0;
+            int end = TextTest.Length;
 
             //getting text boundaries and starting proccess each part
             for (int i = 0; i < spacesCount; i = i + numOfProcesses)
             {
-                if(i + numOfProcesses < spacesCount)
+                if (i + numOfProcesses < spacesCount)
                 {
-                    if(i==0)
-                    {
-                        begin = i;
-                        end = spaces[i + numOfProcesses].Index;
-                    }
-                    else
+                    if(i>0)
                     {
                         begin = spaces[i].Index;
-                        end = spaces[i + numOfProcesses].Index;
                     }
+                    end = spaces[i + numOfProcesses].Index;
                 }
                 else
                 {
-                    if(i==0)
+                    if(i>0)
                     {
-                        begin = 0;
-                    }
-                    else
-                    {
-                        begin = spaces[i].Index;
+                        begin = spaces[i].Index-2;
                     }
                     end = spaces[spacesCount - 1].Index;
+                }
+                if (end + splitBy <= TextTest.Length - 1)
+                {
+                    end+=splitBy;
                 }
                 if (!(begin == end))
                 {
